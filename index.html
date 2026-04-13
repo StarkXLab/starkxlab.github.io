@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>⚙️StarkXLab</title>
+    <title>⚙️ StarkXLab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fonts -->
@@ -11,8 +11,33 @@
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background: #000000;
             color: #ffffff;
+            background: #000;
+            overflow-x: hidden;
+        }
+
+        /* 🔥 TECH BACKGROUND */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56,189,248,0.15), transparent 70%);
+            top: -200px;
+            left: -200px;
+            z-index: -1;
         }
 
         header {
@@ -20,7 +45,6 @@
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             font-size: 22px;
-            letter-spacing: 1px;
             background: rgba(255,255,255,0.05);
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
@@ -43,7 +67,6 @@
 
         .hero p {
             color: #cbd5f5;
-            font-size: 18px;
         }
 
         .grid {
@@ -52,16 +75,19 @@
             margin-top: 30px;
         }
 
+        /* ✨ GLOWING CARDS */
         .card {
             background: #0a0a0a;
             padding: 25px;
             border-radius: 14px;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(56,189,248,0.2);
+            box-shadow: 0 0 15px rgba(56,189,248,0.1);
             transition: 0.3s;
         }
 
         .card:hover {
-            border-color: #ffffff;
+            border-color: #38bdf8;
+            box-shadow: 0 0 25px rgba(56,189,248,0.5);
             transform: translateY(-5px);
         }
 
@@ -76,18 +102,19 @@
             background: #0f0f0f;
             padding: 20px;
             border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(56,189,248,0.2);
+            box-shadow: 0 0 10px rgba(56,189,248,0.1);
             transition: 0.3s;
         }
 
         .project-card:hover {
             transform: scale(1.05);
-            border-color: #ffffff;
+            border-color: #38bdf8;
+            box-shadow: 0 0 20px rgba(56,189,248,0.5);
         }
 
         .highlight {
             font-weight: 600;
-            color: #ffffff;
         }
 
         .accent {
@@ -99,6 +126,7 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 20px;
             margin-bottom: 10px;
+            color: #38bdf8;
         }
 
         footer {
@@ -118,7 +146,11 @@
 
     <div class="hero">
         <h1>Building the Future with AI</h1>
-        <p><span class="highlight">Scalable systems</span> • <span class="highlight">Intelligent products</span> • <span class="highlight">Real-world impact</span></p>
+        <p>
+            <span class="highlight">Scalable systems</span> • 
+            <span class="highlight">Intelligent products</span> • 
+            <span class="highlight">Real-world impact</span>
+        </p>
     </div>
 
     <div class="grid">
@@ -128,8 +160,7 @@
             <p>
                 I’m <span class="highlight">Subhash</span>, a <span class="highlight">Backend Developer</span> focused on building 
                 <span class="highlight">scalable systems</span> and <span class="accent">AI-driven applications</span>.
-                StarkXLab is my initiative to create <span class="highlight">intelligent products</span> that solve 
-                real-world problems using <span class="accent">modern technology</span> and AI.
+                StarkXLab creates <span class="highlight">intelligent products</span> using modern technology and AI.
             </p>
         </div>
 
@@ -140,19 +171,19 @@
 
                 <div class="project-card">
                     <h3>📚 SmartLibrary</h3>
-                    <p>Library system using Django & PostgreSQL with issue/return tracking.</p>
+                    <p>Library system using Django & PostgreSQL.</p>
                     <p class="accent">🔜 AI integration coming soon</p>
                 </div>
 
                 <div class="project-card">
                     <h3>🚆 Train Services API</h3>
-                    <p>Backend API with reservation system & seat availability logic.</p>
+                    <p>Backend API with reservation & seat logic.</p>
                     <p class="accent">🔜 AI-powered recommendations</p>
                 </div>
 
                 <div class="project-card">
                     <h3>🤖 AI Assistant</h3>
-                    <p>AI chatbot for summarizing web content and intelligent interaction.</p>
+                    <p>AI chatbot for summarizing and interaction.</p>
                     <p class="accent">🚧 In development</p>
                 </div>
 
@@ -163,10 +194,9 @@
             <h2>⭐ Vision</h2>
             <p class="vision-title">AI-Powered Operating System</p>
             <p>
-                StarkXLab aims to build an <span class="highlight">intelligent operating system</span> powered by 
-                <span class="accent">Artificial Intelligence</span>, capable of understanding user needs, 
-                automating workflows, and acting as a <span class="highlight">personal assistant</span> 
-                across applications and platforms.
+                Building an <span class="highlight">intelligent OS</span> powered by 
+                <span class="accent">Artificial Intelligence</span> to automate workflows 
+                and act as a <span class="highlight">personal assistant</span>.
             </p>
         </div>
 
