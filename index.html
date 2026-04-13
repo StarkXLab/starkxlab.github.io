@@ -4,20 +4,24 @@
     <title>StarkXLab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #020617, #0f172a);
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top, #0f172a, #020617 80%);
             color: white;
         }
 
         header {
             padding: 20px;
             text-align: center;
+            font-family: 'Orbitron', sans-serif;
             font-size: 22px;
-            font-weight: bold;
-            background: rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+            background: rgba(0,0,0,0.4);
             backdrop-filter: blur(10px);
         }
 
@@ -35,6 +39,7 @@
         .hero h1 {
             font-size: 42px;
             margin-bottom: 10px;
+            font-family: 'Orbitron', sans-serif;
         }
 
         .hero p {
@@ -44,22 +49,23 @@
 
         .grid {
             display: grid;
-            grid-template-columns: 1fr;
             gap: 25px;
             margin-top: 30px;
         }
 
         .card {
-            background: rgba(30, 41, 59, 0.6);
+            background: rgba(30, 41, 59, 0.5);
             padding: 25px;
             border-radius: 16px;
             backdrop-filter: blur(12px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            border: 1px solid rgba(56,189,248,0.2);
             transition: 0.3s;
         }
 
         .card:hover {
             transform: translateY(-5px);
+            border-color: #38bdf8;
         }
 
         .projects {
@@ -70,19 +76,28 @@
         }
 
         .project-card {
-            background: rgba(30, 41, 59, 0.6);
+            background: rgba(15, 23, 42, 0.7);
             padding: 20px;
             border-radius: 14px;
+            border: 1px solid rgba(56,189,248,0.2);
             transition: 0.3s;
         }
 
         .project-card:hover {
             transform: scale(1.05);
+            border-color: #38bdf8;
         }
 
         .highlight {
             color: #38bdf8;
-            font-weight: bold;
+            font-weight: 600;
+        }
+
+        .vision-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 20px;
+            color: #38bdf8;
+            margin-bottom: 10px;
         }
 
         footer {
@@ -96,7 +111,7 @@
 
 <body>
 
-<header>🚀 StarkXLab</header>
+<header>⚙️ StarkXLab</header>
 
 <div class="container">
 
@@ -142,10 +157,12 @@
         </div>
 
         <div class="card">
-            <h2>🚀 Vision</h2>
+            <h2>⭐ Vision</h2>
+            <p class="vision-title">AI-Powered Operating System</p>
             <p>
-                StarkXLab aims to build AI-powered tools that enhance productivity,
-                automate workflows, and create meaningful technological impact.
+                StarkXLab aims to build an intelligent operating system powered by AI,
+                capable of understanding user needs, automating workflows, and acting as a
+                personal assistant across applications and platforms.
             </p>
         </div>
 
