@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>StarkXLab</title>
+    <title>⚙️StarkXLab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background: radial-gradient(circle at top, #0f172a, #020617 80%);
-            color: white;
+            background: #000000;
+            color: #ffffff;
         }
 
         header {
@@ -21,8 +21,8 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 22px;
             letter-spacing: 1px;
-            background: rgba(0,0,0,0.4);
-            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .container {
@@ -38,12 +38,11 @@
 
         .hero h1 {
             font-size: 42px;
-            margin-bottom: 10px;
             font-family: 'Orbitron', sans-serif;
         }
 
         .hero p {
-            color: #94a3b8;
+            color: #cbd5f5;
             font-size: 18px;
         }
 
@@ -54,18 +53,16 @@
         }
 
         .card {
-            background: rgba(30, 41, 59, 0.5);
+            background: #0a0a0a;
             padding: 25px;
-            border-radius: 16px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-            border: 1px solid rgba(56,189,248,0.2);
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.08);
             transition: 0.3s;
         }
 
         .card:hover {
+            border-color: #ffffff;
             transform: translateY(-5px);
-            border-color: #38bdf8;
         }
 
         .projects {
@@ -76,27 +73,31 @@
         }
 
         .project-card {
-            background: rgba(15, 23, 42, 0.7);
+            background: #0f0f0f;
             padding: 20px;
-            border-radius: 14px;
-            border: 1px solid rgba(56,189,248,0.2);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.08);
             transition: 0.3s;
         }
 
         .project-card:hover {
             transform: scale(1.05);
-            border-color: #38bdf8;
+            border-color: #ffffff;
         }
 
         .highlight {
-            color: #38bdf8;
             font-weight: 600;
+            color: #ffffff;
+        }
+
+        .accent {
+            color: #38bdf8;
+            font-weight: bold;
         }
 
         .vision-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 20px;
-            color: #38bdf8;
             margin-bottom: 10px;
         }
 
@@ -104,7 +105,7 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-            color: #94a3b8;
+            color: #888;
         }
     </style>
 </head>
@@ -117,7 +118,7 @@
 
     <div class="hero">
         <h1>Building the Future with AI</h1>
-        <p>Scalable systems • Intelligent products • Real-world impact</p>
+        <p><span class="highlight">Scalable systems</span> • <span class="highlight">Intelligent products</span> • <span class="highlight">Real-world impact</span></p>
     </div>
 
     <div class="grid">
@@ -125,8 +126,10 @@
         <div class="card">
             <h2>👨‍💻 About</h2>
             <p>
-                I’m Subhash, a Backend Developer focused on building scalable systems and AI-driven applications.
-                StarkXLab is my initiative to create intelligent products that solve real-world problems using modern technology and AI.
+                I’m <span class="highlight">Subhash</span>, a <span class="highlight">Backend Developer</span> focused on building 
+                <span class="highlight">scalable systems</span> and <span class="accent">AI-driven applications</span>.
+                StarkXLab is my initiative to create <span class="highlight">intelligent products</span> that solve 
+                real-world problems using <span class="accent">modern technology</span> and AI.
             </p>
         </div>
 
@@ -138,19 +141,19 @@
                 <div class="project-card">
                     <h3>📚 SmartLibrary</h3>
                     <p>Library system using Django & PostgreSQL with issue/return tracking.</p>
-                    <p class="highlight">🔜 AI integration coming soon</p>
+                    <p class="accent">🔜 AI integration coming soon</p>
                 </div>
 
                 <div class="project-card">
                     <h3>🚆 Train Services API</h3>
                     <p>Backend API with reservation system & seat availability logic.</p>
-                    <p class="highlight">🔜 AI-powered recommendations</p>
+                    <p class="accent">🔜 AI-powered recommendations</p>
                 </div>
 
                 <div class="project-card">
                     <h3>🤖 AI Assistant</h3>
                     <p>AI chatbot for summarizing web content and intelligent interaction.</p>
-                    <p class="highlight">🚧 In development</p>
+                    <p class="accent">🚧 In development</p>
                 </div>
 
             </div>
@@ -160,9 +163,10 @@
             <h2>⭐ Vision</h2>
             <p class="vision-title">AI-Powered Operating System</p>
             <p>
-                StarkXLab aims to build an intelligent operating system powered by AI,
-                capable of understanding user needs, automating workflows, and acting as a
-                personal assistant across applications and platforms.
+                StarkXLab aims to build an <span class="highlight">intelligent operating system</span> powered by 
+                <span class="accent">Artificial Intelligence</span>, capable of understanding user needs, 
+                automating workflows, and acting as a <span class="highlight">personal assistant</span> 
+                across applications and platforms.
             </p>
         </div>
 
