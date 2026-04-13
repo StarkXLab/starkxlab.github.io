@@ -3,39 +3,74 @@
 <head>
     <title>StarkXLab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 40px;
-            background-color: #f5f7fa;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: white;
         }
-        h1 {
-            color: #111;
+
+        header {
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            background: #020617;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
             font-size: 40px;
         }
-        h2 {
-            margin-top: 40px;
-            color: #333;
-        }
-        p {
+
+        .hero p {
+            color: #94a3b8;
             font-size: 18px;
-            color: #555;
-            max-width: 600px;
-            margin: auto;
         }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
         .card {
-            background: white;
-            padding: 20px;
+            background: #1e293b;
             margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 12px;
             max-width: 700px;
         }
-        .footer {
-            margin-top: 50px;
-            font-size: 14px;
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-card {
+            background: #1e293b;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 12px;
+            width: 280px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            margin-top: 40px;
             color: gray;
         }
     </style>
@@ -43,31 +78,75 @@
 
 <body>
 
-    <h1>🚀 StarkXLab</h1>
-    <p>Building the future with AI and scalable systems</p>
+<header>🚀 StarkXLab</header>
 
+<div class="hero">
+    <h1>Building the Future with AI</h1>
+    <p>Scalable systems • Intelligent products • Real-world impact</p>
+</div>
+
+<div class="section">
+    <h2>👨‍💻 About</h2>
     <div class="card">
-        <h2>👨‍💻 About</h2>
         <p>
-            Hi, I'm Subhash, a Backend Developer passionate about building scalable systems 
-            and intelligent AI-driven solutions. StarkXLab is my vision to create impactful 
-            technology products that solve real-world problems using modern software and AI.
+            I’m Subhash, a Backend Developer focused on building scalable systems and AI-driven applications.
+            StarkXLab is my initiative to develop intelligent products that solve real-world problems using modern technology and artificial intelligence.
         </p>
     </div>
+</div>
 
+<div class="section">
+    <h2>📦 Projects</h2>
+    <div class="projects">
+
+        <div class="project-card">
+            <h3>📚 SmartLibrary</h3>
+            <p>
+                Library Management System built with Django & PostgreSQL,
+                featuring book tracking, issue/return system, and availability management.
+            </p>
+            <p style="color:#38bdf8;">🔜 AI integration coming soon</p>
+        </div>
+
+        <div class="project-card">
+            <h3>🚆 Train Services API</h3>
+            <p>
+                Backend system using Django REST Framework with reservation handling,
+                filtering, and seat availability management.
+            </p>
+            <p style="color:#38bdf8;">🔜 AI-powered recommendations coming soon</p>
+        </div>
+
+        <div class="project-card">
+            <h3>🤖 AI Assistant (Upcoming)</h3>
+            <p>
+                An intelligent chatbot that summarizes web pages and interacts with users
+                using advanced AI models. Designed as part of StarkXLab's core vision.
+            </p>
+            <p style="color:#38bdf8;">🚧 In development</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="section">
+    <h2>🚀 Vision</h2>
     <div class="card">
-        <h2>📦 Projects</h2>
-        <p>🚧 Projects are currently under development. Coming soon...</p>
+        <p>
+            StarkXLab aims to build AI-powered tools and platforms that enhance productivity,
+            automate workflows, and create meaningful technological impact in everyday life.
+        </p>
     </div>
+</div>
 
-    <div class="card">
-        <h2>📧 Contact</h2>
-        <p>Email: starkxlab@gmail.com</p>
-    </div>
+<div class="section">
+    <h2>📧 Contact</h2>
+    <p>starkxlab@gmail.com</p>
+</div>
 
-    <div class="footer">
-        <p>© 2026 StarkXLab. All rights reserved.</p>
-    </div>
+<footer>
+    © 2026 StarkXLab. All rights reserved.
+</footer>
 
 </body>
 </html>
