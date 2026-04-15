@@ -46,6 +46,19 @@
             align-items: center;
         }
 
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(99,102,241,0.8));
+        }
+
         header h2 {
             font-weight: 600;
             letter-spacing: 0.5px;
@@ -139,7 +152,10 @@
 <body>
 
 <header class="container">
-    <h2>✦ StarkXLab</h2>
+    <div class="logo">
+        <img src="logo.png" alt="StarkXLab Logo">
+        <h2>StarkXLab</h2>
+    </div>
 </header>
 
 <section class="hero">
