@@ -5,34 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: #020617;
             color: white;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: auto;
             padding: 0 20px;
         }
 
         section {
-            padding: 120px 0;
+            padding: 70px 0; /* reduced gap */
         }
 
-        /* NAV */
         header {
             padding: 20px 0;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
         }
 
         /* HERO */
@@ -40,16 +34,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 60px;
+            gap: 50px;
             flex-wrap: wrap;
         }
 
         .hero-text {
-            max-width: 550px;
+            max-width: 520px;
         }
 
         .hero-text h1 {
-            font-size: 48px;
+            font-size: 44px;
             line-height: 1.2;
         }
 
@@ -58,15 +52,15 @@
         }
 
         .hero-text p {
-            margin-top: 20px;
+            margin-top: 15px;
             color: #94a3b8;
         }
 
-        /* ANIMATION */
+        /* AI ANIMATION */
         .ai-visual {
             position: relative;
-            width: 300px;
-            height: 300px;
+            width: 280px;
+            height: 280px;
         }
 
         .ring {
@@ -78,24 +72,15 @@
             animation: spin 6s linear infinite;
         }
 
-        .ring:nth-child(1) {
-            width: 250px;
-            height: 250px;
-        }
-
+        .ring:nth-child(1) { width: 240px; height: 240px; }
         .ring:nth-child(2) {
-            width: 180px;
-            height: 180px;
-            top: 35px;
-            left: 35px;
+            width: 170px; height: 170px;
+            top: 35px; left: 35px;
             animation-duration: 4s;
         }
-
         .ring:nth-child(3) {
-            width: 120px;
-            height: 120px;
-            top: 65px;
-            left: 65px;
+            width: 100px; height: 100px;
+            top: 70px; left: 70px;
             animation-duration: 2s;
         }
 
@@ -103,9 +88,8 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* SECTION */
         h2 {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         p {
@@ -113,27 +97,33 @@
             line-height: 1.6;
         }
 
-        .card {
-            background: rgba(255,255,255,0.05);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 700px;
+        /* FEATURES */
+        .feature {
+            margin-top: 20px;
+            max-width: 600px;
         }
 
-        .features {
+        /* PRODUCTS */
+        .products {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .product {
+            max-width: 300px;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
             margin-top: 40px;
-        }
-
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 500px;
         }
 
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 30px;
             color: gray;
         }
     </style>
@@ -142,7 +132,7 @@
 <body>
 
 <header>
-    <div class="container nav">
+    <div class="container">
         <h2>🚀 StarkXLab</h2>
     </div>
 </header>
@@ -157,8 +147,8 @@
             </h1>
 
             <p>
-                StarkXLab focuses on building intelligent digital systems that simplify complexity,
-                enhance productivity, and shape the future of technology.
+                StarkXLab focuses on building intelligent digital systems that simplify complexity 
+                and enhance productivity using modern AI-driven approaches.
             </p>
         </div>
 
@@ -174,39 +164,33 @@
 <section>
     <div class="container">
         <h2>👨‍💻 About</h2>
-
-        <div class="card">
-            <p>
-                I'm Subhash, a backend developer passionate about building scalable systems 
-                and exploring the power of artificial intelligence. StarkXLab represents my vision 
-                to create impactful and intelligent technology solutions.
-            </p>
-        </div>
+        <p>
+            I'm Subhash, a backend developer passionate about building scalable systems and exploring 
+            the potential of artificial intelligence. StarkXLab represents my long-term vision to create 
+            impactful AI-driven products that solve real-world problems and redefine how technology interacts with humans.
+        </p>
     </div>
 </section>
 
 <section>
     <div class="container">
         <h2>🧠 Core Capability</h2>
-
-        <div class="features">
-            <div class="feature-card">
-                <h3>Intelligent Systems</h3>
-                <p>
-                    Designing systems that can understand, adapt, and assist in solving real-world problems 
-                    using modern AI approaches.
-                </p>
-            </div>
-        </div>
+        <p class="feature">
+            Designing intelligent systems that can understand, adapt, and assist users by leveraging AI 
+            to automate workflows and enhance decision-making.
+        </p>
     </div>
 </section>
 
 <section>
     <div class="container">
         <h2>🚀 Vision</h2>
-        <p style="max-width:700px;">
-            To build a future where intelligent systems seamlessly integrate into daily life,
-            helping individuals and businesses achieve more with less effort.
+        <p style="max-width:750px;">
+            StarkXLab is built with the vision of creating a powerful AI ecosystem that goes beyond traditional applications. 
+            The goal is to develop intelligent platforms that can seamlessly integrate into daily life, automate complex tasks, 
+            and provide meaningful insights. In the long term, StarkXLab aims to evolve into a foundation for next-generation 
+            AI systems, including an intelligent operating layer that understands user behavior, adapts dynamically, and 
+            enhances productivity at a completely new level.
         </p>
     </div>
 </section>
@@ -215,19 +199,19 @@
     <div class="container">
         <h2>🔮 Future Products</h2>
 
-        <div class="features">
+        <div class="products">
 
-            <div class="feature-card">
+            <div class="product">
                 <h3>AI Operating Layer</h3>
                 <p>
-                    A smart system layer that understands user behavior and assists across applications.
+                    A smart AI-powered system layer that understands user behavior and works across applications.
                 </p>
             </div>
 
-            <div class="feature-card">
+            <div class="product">
                 <h3>Web Intelligence Engine</h3>
                 <p>
-                    AI that understands and summarizes web content in real-time.
+                    AI that can read, understand, and summarize web content in real-time.
                 </p>
             </div>
 
@@ -235,11 +219,9 @@
     </div>
 </section>
 
-<section>
-    <div class="container">
-        <h2>📧 Contact</h2>
-        <p>starkxlab@gmail.com</p>
-    </div>
+<section class="contact">
+    <h2>📧 Contact</h2>
+    <p>starkxlab@gmail.com</p>
 </section>
 
 <footer>
