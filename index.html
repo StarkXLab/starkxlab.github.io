@@ -10,20 +10,38 @@
             font-family: 'Segoe UI', sans-serif;
             background: #020617;
             color: white;
-            overflow-x: hidden;
+        }
+
+        /* GLOBAL SPACING */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0; /* BIG GAP = PREMIUM LOOK */
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #94a3b8;
+            line-height: 1.6;
         }
 
         /* NAVBAR */
         header {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 40px;
-            background: rgba(255,255,255,0.03);
-            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        header h2 {
-            margin: 0;
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         nav a {
@@ -38,121 +56,68 @@
 
         /* HERO */
         .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-around;
-            padding: 80px 20px;
+            text-align: center;
+            padding-top: 120px;
         }
 
-        .hero-text {
-            max-width: 500px;
-        }
-
-        .hero-text h1 {
-            font-size: 40px;
+        .hero h1 {
+            font-size: 50px;
             background: linear-gradient(90deg, #3b82f6, #9333ea);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero-text p {
-            color: #94a3b8;
-            margin-top: 10px;
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 20px auto;
         }
 
         .btn {
-            margin-top: 20px;
             display: inline-block;
-            padding: 12px 20px;
-            background: linear-gradient(90deg, #3b82f6, #9333ea);
+            margin-top: 20px;
+            padding: 12px 25px;
             border-radius: 8px;
+            background: linear-gradient(90deg, #3b82f6, #9333ea);
             text-decoration: none;
             color: white;
         }
 
-        /* ANIMATION CIRCLES */
-        .hero-visual {
-            position: relative;
-            width: 300px;
-            height: 300px;
-        }
-
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            border: 3px solid transparent;
-            border-top: 3px solid #3b82f6;
-            border-right: 3px solid #9333ea;
-            animation: spin 6s linear infinite;
-        }
-
-        .circle:nth-child(1) {
-            width: 200px;
-            height: 200px;
-            top: 50px;
-            left: 50px;
-        }
-
-        .circle:nth-child(2) {
-            width: 140px;
-            height: 140px;
-            top: 80px;
-            left: 80px;
-            animation-duration: 4s;
-        }
-
-        .circle:nth-child(3) {
-            width: 80px;
-            height: 80px;
-            top: 110px;
-            left: 110px;
-            animation-duration: 2s;
-        }
-
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
-        }
-
-        /* SECTION */
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
+        /* CARDS */
         .card {
             background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 12px;
-            max-width: 700px;
-            margin: auto;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
         }
 
-        /* PROJECTS */
+        /* PROJECT GRID */
         .projects {
             display: flex;
+            gap: 30px; /* spacing between cards */
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: 50px;
         }
 
         .project-card {
             background: rgba(255,255,255,0.05);
-            padding: 20px;
-            margin: 15px;
-            border-radius: 12px;
-            width: 260px;
+            padding: 25px;
+            border-radius: 15px;
+            width: 300px;
             transition: 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 15px rgba(59,130,246,0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(59,130,246,0.3);
         }
 
+        /* FOOTER */
         footer {
+            padding: 40px 0;
             text-align: center;
-            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
             color: gray;
         }
     </style>
@@ -161,59 +126,60 @@
 <body>
 
 <header>
-    <h2>🚀 StarkXLab</h2>
-    <nav>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </nav>
+    <div class="container nav">
+        <h2>🚀 StarkXLab</h2>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<div class="hero">
-    <div class="hero-text">
+<section class="hero">
+    <div class="container">
         <h1>AI at the Core</h1>
         <p>Building intelligent systems and scalable AI solutions for real-world impact.</p>
         <a href="#" class="btn">Explore Projects</a>
     </div>
+</section>
 
-    <div class="hero-visual">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
-</div>
-
-<div class="section">
-    <h2>👨‍💻 About</h2>
-    <div class="card">
-        <p>
-            I’m Subhash, a Backend Developer building scalable systems and AI-driven applications.
-            StarkXLab is focused on creating intelligent solutions using modern technologies.
-        </p>
-    </div>
-</div>
-
-<div class="section">
-    <h2>📦 Projects</h2>
-    <div class="projects">
-
-        <div class="project-card">
-            <h3>📚 SmartLibrary</h3>
-            <p>Django-based library system with tracking and management.</p>
+<section>
+    <div class="container">
+        <h2>👨‍💻 About</h2>
+        <div class="card">
+            <p>
+                I’m Subhash, a Backend Developer building scalable systems and AI-driven applications.
+                StarkXLab focuses on creating intelligent solutions using modern technologies.
+            </p>
         </div>
-
-        <div class="project-card">
-            <h3>🚆 Train Services API</h3>
-            <p>REST API for reservations and seat availability.</p>
-        </div>
-
     </div>
-</div>
+</section>
 
-<div class="section">
-    <h2>📧 Contact</h2>
-    <p>starkxlab@gmail.com</p>
-</div>
+<section>
+    <div class="container">
+        <h2>📦 Projects</h2>
+
+        <div class="projects">
+            <div class="project-card">
+                <h3>📚 SmartLibrary</h3>
+                <p>Django + PostgreSQL based system with book tracking.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>🚆 Train Services API</h3>
+                <p>REST API for reservation and seat management.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>📧 Contact</h2>
+        <p>starkxlab@gmail.com</p>
+    </div>
+</section>
 
 <footer>
     © 2026 StarkXLab
