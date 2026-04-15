@@ -4,10 +4,13 @@
     <title>StarkXLab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
             background: #020617;
             color: white;
         }
@@ -22,7 +25,7 @@
             padding: 120px 0;
         }
 
-        /* NAVBAR */
+        /* NAV */
         header {
             padding: 20px 0;
         }
@@ -30,17 +33,6 @@
         .nav {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-        }
-
-        nav a {
-            margin-left: 25px;
-            color: #94a3b8;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            color: white;
         }
 
         /* HERO */
@@ -70,51 +62,75 @@
             color: #94a3b8;
         }
 
-        .btn {
-            margin-top: 25px;
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 8px;
-            background: linear-gradient(90deg, #3b82f6, #9333ea);
-            text-decoration: none;
-            color: white;
-        }
-
-        /* HERO VISUAL */
-        .hero-image {
-            width: 350px;
-            border-radius: 20px;
-            box-shadow: 0 0 40px rgba(59,130,246,0.4);
-        }
-
-        /* FEATURES */
-        .features {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            padding: 25px;
-            border-radius: 15px;
+        /* ANIMATION */
+        .ai-visual {
+            position: relative;
             width: 300px;
-            transition: 0.3s;
+            height: 300px;
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(59,130,246,0.3);
+        .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top: 2px solid #3b82f6;
+            border-right: 2px solid #9333ea;
+            animation: spin 6s linear infinite;
         }
 
-        /* SECTION TITLE */
+        .ring:nth-child(1) {
+            width: 250px;
+            height: 250px;
+        }
+
+        .ring:nth-child(2) {
+            width: 180px;
+            height: 180px;
+            top: 35px;
+            left: 35px;
+            animation-duration: 4s;
+        }
+
+        .ring:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            top: 65px;
+            left: 65px;
+            animation-duration: 2s;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        /* SECTION */
         h2 {
             margin-bottom: 20px;
         }
 
-        /* FOOTER */
+        p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 700px;
+        }
+
+        .features {
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+        }
+
         footer {
             text-align: center;
             padding: 40px;
@@ -128,12 +144,6 @@
 <header>
     <div class="container nav">
         <h2>🚀 StarkXLab</h2>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Features</a>
-            <a href="#">Vision</a>
-            <a href="#">Contact</a>
-        </nav>
     </div>
 </header>
 
@@ -143,43 +153,50 @@
         <div class="hero-text">
             <h1>
                 Unlock Your <span>AI Potential</span><br>
-                with Intelligent Systems
+                Through Intelligent Systems
             </h1>
 
             <p>
-                StarkXLab builds scalable backend systems and AI-driven platforms 
-                to automate workflows, enhance productivity, and power future applications.
+                StarkXLab focuses on building intelligent digital systems that simplify complexity,
+                enhance productivity, and shape the future of technology.
             </p>
-
-            <a href="#" class="btn">Explore Projects</a>
         </div>
 
-        <img class="hero-image" src="https://cdn.pixabay.com/photo/2023/01/31/08/46/brain-7755036_1280.jpg">
+        <div class="ai-visual">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+        </div>
 
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>⚡ Core Capabilities</h2>
+        <h2>👨‍💻 About</h2>
+
+        <div class="card">
+            <p>
+                I'm Subhash, a backend developer passionate about building scalable systems 
+                and exploring the power of artificial intelligence. StarkXLab represents my vision 
+                to create impactful and intelligent technology solutions.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>🧠 Core Capability</h2>
 
         <div class="features">
-
             <div class="feature-card">
-                <h3>🧠 Intelligent Systems</h3>
-                <p>Designing AI-powered architectures for real-world problem solving.</p>
+                <h3>Intelligent Systems</h3>
+                <p>
+                    Designing systems that can understand, adapt, and assist in solving real-world problems 
+                    using modern AI approaches.
+                </p>
             </div>
-
-            <div class="feature-card">
-                <h3>⚙️ Automation</h3>
-                <p>Automating workflows and backend operations for efficiency.</p>
-            </div>
-
-            <div class="feature-card">
-                <h3>📊 Scalable Backend</h3>
-                <p>Building high-performance APIs and data-driven systems.</p>
-            </div>
-
         </div>
     </div>
 </section>
@@ -188,8 +205,8 @@
     <div class="container">
         <h2>🚀 Vision</h2>
         <p style="max-width:700px;">
-            StarkXLab aims to build a future where intelligent systems automate everyday tasks,
-            enhance human productivity, and create scalable AI solutions for global impact.
+            To build a future where intelligent systems seamlessly integrate into daily life,
+            helping individuals and businesses achieve more with less effort.
         </p>
     </div>
 </section>
@@ -201,18 +218,17 @@
         <div class="features">
 
             <div class="feature-card">
-                <h3>🤖 AI Assistant OS</h3>
-                <p>An intelligent operating system layer that understands user behavior and automates tasks.</p>
+                <h3>AI Operating Layer</h3>
+                <p>
+                    A smart system layer that understands user behavior and assists across applications.
+                </p>
             </div>
 
             <div class="feature-card">
-                <h3>🌐 Smart Web AI</h3>
-                <p>AI that understands and summarizes entire web pages in real-time.</p>
-            </div>
-
-            <div class="feature-card">
-                <h3>📈 Productivity Engine</h3>
-                <p>AI-powered tools to enhance workflow, learning, and decision-making.</p>
+                <h3>Web Intelligence Engine</h3>
+                <p>
+                    AI that understands and summarizes web content in real-time.
+                </p>
             </div>
 
         </div>
