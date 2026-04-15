@@ -22,7 +22,7 @@
             padding: 120px 0;
         }
 
-        /* NAV */
+        /* NAVBAR */
         header {
             padding: 20px 0;
         }
@@ -30,6 +30,7 @@
         .nav {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         nav a {
@@ -52,21 +53,21 @@
         }
 
         .hero-text {
-            max-width: 500px;
+            max-width: 550px;
         }
 
         .hero-text h1 {
             font-size: 48px;
             line-height: 1.2;
-            background: linear-gradient(90deg, #3b82f6, #9333ea);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text span {
+            color: #3b82f6;
         }
 
         .hero-text p {
             margin-top: 20px;
             color: #94a3b8;
-            font-size: 18px;
         }
 
         .btn {
@@ -80,61 +81,43 @@
         }
 
         /* HERO VISUAL */
-        .hero-box {
-            width: 400px;
-            height: 250px;
-            background: rgba(255,255,255,0.05);
+        .hero-image {
+            width: 350px;
             border-radius: 20px;
-            position: relative;
-            box-shadow: 0 0 40px rgba(59,130,246,0.3);
+            box-shadow: 0 0 40px rgba(59,130,246,0.4);
         }
 
-        .glow {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, #3b82f6, transparent);
-            top: -40px;
-            right: -40px;
-            filter: blur(60px);
+        /* FEATURES */
+        .features {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
         }
 
-        /* SECTION */
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            width: 300px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(59,130,246,0.3);
+        }
+
+        /* SECTION TITLE */
         h2 {
             margin-bottom: 20px;
         }
 
-        .card {
-            background: rgba(255,255,255,0.05);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 700px;
-        }
-
-        /* PROJECTS */
-        .projects {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .project-card {
-            width: 280px;
-            background: rgba(255,255,255,0.05);
-            padding: 20px;
-            border-radius: 15px;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(147,51,234,0.4);
-        }
-
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 40px;
             color: gray;
         }
     </style>
@@ -146,8 +129,9 @@
     <div class="container nav">
         <h2>🚀 StarkXLab</h2>
         <nav>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Vision</a>
             <a href="#">Contact</a>
         </nav>
     </div>
@@ -155,54 +139,89 @@
 
 <section>
     <div class="container hero">
+
         <div class="hero-text">
-            <h1>Modern AI Systems.<br>Built for Scale.</h1>
+            <h1>
+                Unlock Your <span>AI Potential</span><br>
+                with Intelligent Systems
+            </h1>
+
             <p>
-                StarkXLab builds intelligent systems and scalable backend solutions 
-                powered by modern AI technologies.
+                StarkXLab builds scalable backend systems and AI-driven platforms 
+                to automate workflows, enhance productivity, and power future applications.
             </p>
+
             <a href="#" class="btn">Explore Projects</a>
         </div>
 
-        <div class="hero-box">
-            <div class="glow"></div>
-        </div>
+        <img class="hero-image" src="https://cdn.pixabay.com/photo/2023/01/31/08/46/brain-7755036_1280.jpg">
+
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>About</h2>
-        <div class="card">
-            <p>
-                I’m Subhash, a Backend Developer building scalable systems and AI-driven applications.
-                StarkXLab focuses on creating intelligent products that solve real-world problems.
-            </p>
-        </div>
-    </div>
-</section>
+        <h2>⚡ Core Capabilities</h2>
 
-<section>
-    <div class="container">
-        <h2>Projects</h2>
+        <div class="features">
 
-        <div class="projects">
-            <div class="project-card">
-                <h3>SmartLibrary</h3>
-                <p>Django + PostgreSQL based system with book management.</p>
+            <div class="feature-card">
+                <h3>🧠 Intelligent Systems</h3>
+                <p>Designing AI-powered architectures for real-world problem solving.</p>
             </div>
 
-            <div class="project-card">
-                <h3>Train Services API</h3>
-                <p>Backend API for reservations and seat tracking.</p>
+            <div class="feature-card">
+                <h3>⚙️ Automation</h3>
+                <p>Automating workflows and backend operations for efficiency.</p>
             </div>
+
+            <div class="feature-card">
+                <h3>📊 Scalable Backend</h3>
+                <p>Building high-performance APIs and data-driven systems.</p>
+            </div>
+
         </div>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>Contact</h2>
+        <h2>🚀 Vision</h2>
+        <p style="max-width:700px;">
+            StarkXLab aims to build a future where intelligent systems automate everyday tasks,
+            enhance human productivity, and create scalable AI solutions for global impact.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>🔮 Future Products</h2>
+
+        <div class="features">
+
+            <div class="feature-card">
+                <h3>🤖 AI Assistant OS</h3>
+                <p>An intelligent operating system layer that understands user behavior and automates tasks.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌐 Smart Web AI</h3>
+                <p>AI that understands and summarizes entire web pages in real-time.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📈 Productivity Engine</h3>
+                <p>AI-powered tools to enhance workflow, learning, and decision-making.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>📧 Contact</h2>
         <p>starkxlab@gmail.com</p>
     </div>
 </section>
