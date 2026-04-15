@@ -12,40 +12,28 @@
             color: white;
         }
 
-        /* GLOBAL SPACING */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
             padding: 0 20px;
         }
 
         section {
-            padding: 100px 0; /* BIG GAP = PREMIUM LOOK */
+            padding: 120px 0;
         }
 
-        h1, h2 {
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #94a3b8;
-            line-height: 1.6;
-        }
-
-        /* NAVBAR */
+        /* NAV */
         header {
             padding: 20px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
         .nav {
             display: flex;
             justify-content: space-between;
-            align-items: center;
         }
 
         nav a {
-            margin-left: 20px;
+            margin-left: 25px;
             color: #94a3b8;
             text-decoration: none;
         }
@@ -56,26 +44,34 @@
 
         /* HERO */
         .hero {
-            text-align: center;
-            padding-top: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            flex-wrap: wrap;
         }
 
-        .hero h1 {
-            font-size: 50px;
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2;
             background: linear-gradient(90deg, #3b82f6, #9333ea);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero p {
+        .hero-text p {
+            margin-top: 20px;
+            color: #94a3b8;
             font-size: 18px;
-            max-width: 600px;
-            margin: 20px auto;
         }
 
         .btn {
+            margin-top: 25px;
             display: inline-block;
-            margin-top: 20px;
             padding: 12px 25px;
             border-radius: 8px;
             background: linear-gradient(90deg, #3b82f6, #9333ea);
@@ -83,41 +79,62 @@
             color: white;
         }
 
-        /* CARDS */
+        /* HERO VISUAL */
+        .hero-box {
+            width: 400px;
+            height: 250px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 0 40px rgba(59,130,246,0.3);
+        }
+
+        .glow {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #3b82f6, transparent);
+            top: -40px;
+            right: -40px;
+            filter: blur(60px);
+        }
+
+        /* SECTION */
+        h2 {
+            margin-bottom: 20px;
+        }
+
         .card {
             background: rgba(255,255,255,0.05);
-            border-radius: 15px;
             padding: 30px;
+            border-radius: 15px;
+            max-width: 700px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
             margin-top: 40px;
         }
 
-        /* PROJECT GRID */
-        .projects {
-            display: flex;
-            gap: 30px; /* spacing between cards */
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
         .project-card {
+            width: 280px;
             background: rgba(255,255,255,0.05);
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
-            width: 300px;
             transition: 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 0 20px rgba(59,130,246,0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(147,51,234,0.4);
         }
 
-        /* FOOTER */
         footer {
-            padding: 40px 0;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 40px 0;
             color: gray;
         }
     </style>
@@ -136,21 +153,30 @@
     </div>
 </header>
 
-<section class="hero">
-    <div class="container">
-        <h1>AI at the Core</h1>
-        <p>Building intelligent systems and scalable AI solutions for real-world impact.</p>
-        <a href="#" class="btn">Explore Projects</a>
+<section>
+    <div class="container hero">
+        <div class="hero-text">
+            <h1>Modern AI Systems.<br>Built for Scale.</h1>
+            <p>
+                StarkXLab builds intelligent systems and scalable backend solutions 
+                powered by modern AI technologies.
+            </p>
+            <a href="#" class="btn">Explore Projects</a>
+        </div>
+
+        <div class="hero-box">
+            <div class="glow"></div>
+        </div>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>👨‍💻 About</h2>
+        <h2>About</h2>
         <div class="card">
             <p>
                 I’m Subhash, a Backend Developer building scalable systems and AI-driven applications.
-                StarkXLab focuses on creating intelligent solutions using modern technologies.
+                StarkXLab focuses on creating intelligent products that solve real-world problems.
             </p>
         </div>
     </div>
@@ -158,17 +184,17 @@
 
 <section>
     <div class="container">
-        <h2>📦 Projects</h2>
+        <h2>Projects</h2>
 
         <div class="projects">
             <div class="project-card">
-                <h3>📚 SmartLibrary</h3>
-                <p>Django + PostgreSQL based system with book tracking.</p>
+                <h3>SmartLibrary</h3>
+                <p>Django + PostgreSQL based system with book management.</p>
             </div>
 
             <div class="project-card">
-                <h3>🚆 Train Services API</h3>
-                <p>REST API for reservation and seat management.</p>
+                <h3>Train Services API</h3>
+                <p>Backend API for reservations and seat tracking.</p>
             </div>
         </div>
     </div>
@@ -176,7 +202,7 @@
 
 <section>
     <div class="container">
-        <h2>📧 Contact</h2>
+        <h2>Contact</h2>
         <p>starkxlab@gmail.com</p>
     </div>
 </section>
