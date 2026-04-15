@@ -1,189 +1,116 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>StarkXLab</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at center, #6d28d9 0%, #020617 60%);
+    color: white;
+}
 
-    <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: radial-gradient(circle at center, #6d28d9 0%, #020617 60%);
-            color: white;
-        }
+section {
+    padding: 90px 0;
+    position: relative;
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 0 20px;
-            text-align: center;
-        }
+/* THIN LINE */
+section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+}
 
-        section {
-            padding: 90px 0;
-        }
+/* HEADER */
+header {
+    padding: 25px 0;
+}
 
-        header {
-            padding: 25px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+header h2 {
+    font-weight: 600;
+}
 
-        header h2 {
-            font-weight: 600;
-        }
+/* HERO */
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    font-weight: 600;
+}
 
-        /* HERO */
-        .hero h1 {
-            font-size: 60px;
-            line-height: 1.1;
-            font-weight: 600;
-            letter-spacing: -1px;
-        }
+.hero span {
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .hero span {
-            background: linear-gradient(90deg, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #cbd5f5;
+}
 
-        .hero p {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #cbd5f5;
-        }
+/* BADGE */
+.badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
 
-        /* SMALL BADGE */
-        .badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.1);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
+/* SECTION TITLES */
+.section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #e2e8f0;
+}
 
-        .section-title {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #e2e8f0;
-        }
+/* TEXT */
+p {
+    color: #94a3b8;
+    line-height: 1.7;
+    transition: 0.3s ease;
+}
 
-        p {
-            color: #94a3b8;
-            line-height: 1.7;
-        }
+/* 🔥 HOVER GLOW EFFECT */
+section:hover p {
+    color: #e2e8f0;
+    text-shadow: 0 0 8px rgba(99,102,241,0.3);
+}
 
-        /* PRODUCTS */
-        .products {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
+/* PRODUCTS */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
 
-        .product {
-            max-width: 280px;
-        }
+.product {
+    max-width: 280px;
+    transition: 0.3s ease;
+}
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #64748b;
-        }
-    </style>
-</head>
+/* PRODUCT GLOW */
+.product:hover {
+    transform: translateY(-5px);
+    text-shadow: 0 0 10px rgba(168,85,247,0.5);
+}
 
-<body>
-
-<header class="container">
-    <h2>✦ StarkXLab</h2>
-</header>
-
-<section class="hero">
-    <div class="container">
-
-        <div class="badge">AI Startup • StarkXLab</div>
-
-        <h1>
-            Unlock Your <span>AI Potential</span><br>
-            Through Intelligent Systems
-        </h1>
-
-        <p>
-            StarkXLab focuses on building intelligent digital systems that simplify complexity 
-            and enhance productivity using modern AI-driven approaches.
-        </p>
-
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="section-title">About</div>
-        <p>
-            I'm Subhash, a backend developer passionate about building scalable systems and exploring 
-            artificial intelligence. StarkXLab represents my long-term vision to create impactful AI-driven 
-            products that solve real-world problems.
-        </p>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="section-title">Core Capability</div>
-        <p>
-            Designing intelligent systems that can understand, adapt, and assist users using AI to 
-            automate workflows and enhance decision-making.
-        </p>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="section-title">Vision</div>
-        <p>
-            StarkXLab aims to build a powerful AI ecosystem that integrates into daily life, automates 
-            complex tasks, and evolves into an intelligent operating layer that understands user behavior 
-            and enhances productivity at scale.
-        </p>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="section-title">Future Products</div>
-
-        <div class="products">
-            <div class="product">
-                <h3>AI Operating Layer</h3>
-                <p>A system that understands users and works across applications.</p>
-            </div>
-
-            <div class="product">
-                <h3>Web Intelligence Engine</h3>
-                <p>AI that understands and summarizes web content in real-time.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="section-title">Contact</div>
-        <p>starkxlab@gmail.com</p>
-    </div>
-</section>
-
-<footer>
-    © 2026 StarkXLab
-</footer>
-
-</body>
-</html>
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+}
