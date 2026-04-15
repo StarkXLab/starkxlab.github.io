@@ -11,8 +11,26 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: #020617;
             color: white;
+            background: black;
+        }
+
+        /* BACKGROUND IMAGE */
+        .bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769') no-repeat center center/cover;
+            z-index: -2;
+        }
+
+        /* DARK OVERLAY */
+        .overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 6, 23, 0.85);
+            z-index: -1;
         }
 
         .container {
@@ -22,7 +40,7 @@
         }
 
         section {
-            padding: 70px 0; /* reduced gap */
+            padding: 70px 0;
         }
 
         header {
@@ -53,7 +71,7 @@
 
         .hero-text p {
             margin-top: 15px;
-            color: #94a3b8;
+            color: #cbd5f5;
         }
 
         /* AI ANIMATION */
@@ -93,17 +111,15 @@
         }
 
         p {
-            color: #94a3b8;
+            color: #cbd5f5;
             line-height: 1.6;
         }
 
-        /* FEATURES */
         .feature {
             margin-top: 20px;
             max-width: 600px;
         }
 
-        /* PRODUCTS */
         .products {
             display: flex;
             gap: 60px;
@@ -115,7 +131,6 @@
             max-width: 300px;
         }
 
-        /* CONTACT */
         .contact {
             text-align: center;
             margin-top: 40px;
@@ -124,16 +139,19 @@
         footer {
             text-align: center;
             padding: 30px;
-            color: gray;
+            color: #94a3b8;
         }
     </style>
 </head>
 
 <body>
 
+<div class="bg"></div>
+<div class="overlay"></div>
+
 <header>
     <div class="container">
-        <h2>🚀 StarkXLab</h2>
+        <h2>⚙️ StarkXLab</h2>
     </div>
 </header>
 
@@ -167,7 +185,7 @@
         <p>
             I'm Subhash, a backend developer passionate about building scalable systems and exploring 
             the potential of artificial intelligence. StarkXLab represents my long-term vision to create 
-            impactful AI-driven products that solve real-world problems and redefine how technology interacts with humans.
+            impactful AI-driven products.
         </p>
     </div>
 </section>
@@ -176,8 +194,7 @@
     <div class="container">
         <h2>🧠 Core Capability</h2>
         <p class="feature">
-            Designing intelligent systems that can understand, adapt, and assist users by leveraging AI 
-            to automate workflows and enhance decision-making.
+            Designing intelligent systems that can understand, adapt, and assist users using AI.
         </p>
     </div>
 </section>
@@ -185,34 +202,28 @@
 <section>
     <div class="container">
         <h2>🚀 Vision</h2>
-        <p style="max-width:750px;">
-            StarkXLab is built with the vision of creating a powerful AI ecosystem that goes beyond traditional applications. 
-            The goal is to develop intelligent platforms that can seamlessly integrate into daily life, automate complex tasks, 
-            and provide meaningful insights. In the long term, StarkXLab aims to evolve into a foundation for next-generation 
-            AI systems, including an intelligent operating layer that understands user behavior, adapts dynamically, and 
-            enhances productivity at a completely new level.
+        <p>
+            StarkXLab aims to build a powerful AI ecosystem that integrates into daily life, automates 
+            complex tasks, and evolves into an intelligent operating layer that understands user behavior 
+            and enhances productivity.
         </p>
     </div>
 </section>
 
 <section>
     <div class="container">
-        <h2>🔮 Future Products</h2>
+        <h2>💡 Future Products</h2>
 
         <div class="products">
 
             <div class="product">
                 <h3>AI Operating Layer</h3>
-                <p>
-                    A smart AI-powered system layer that understands user behavior and works across applications.
-                </p>
+                <p>A system that understands users and works across applications.</p>
             </div>
 
             <div class="product">
                 <h3>Web Intelligence Engine</h3>
-                <p>
-                    AI that can read, understand, and summarize web content in real-time.
-                </p>
+                <p>AI that understands and summarizes web content.</p>
             </div>
 
         </div>
@@ -225,7 +236,7 @@
 </section>
 
 <footer>
-    © 2026 StarkXLab
+    © 2026 StarkXLab. All rights reserved.
 </footer>
 
 </body>
