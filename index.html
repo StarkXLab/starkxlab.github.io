@@ -1,39 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>StarkXLab</title>
+    <title>⚙️ StarkXLab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- PREMIUM FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             background: radial-gradient(circle at center, #6d28d9 0%, #020617 60%);
             color: white;
-            overflow-x: hidden;
-        }
-
-        /* ✨ MOVING GLOW BACKGROUND */
-        body::before {
-            content: "";
-            position: fixed;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(168,85,247,0.4), transparent 70%);
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            filter: blur(120px);
-            animation: moveGlow 8s infinite alternate ease-in-out;
-            z-index: -1;
-        }
-
-        @keyframes moveGlow {
-            0% { transform: translate(-50%, -20px); }
-            100% { transform: translate(-50%, 40px); }
         }
 
         .container {
@@ -46,18 +25,9 @@
         section {
             padding: 90px 0;
             position: relative;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease;
         }
 
-        /* ⚡ SCROLL REVEAL ACTIVE */
-        section.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ✨ Thin divider */
+        /* ✨ Thin glowing divider */
         section::after {
             content: "";
             position: absolute;
@@ -71,15 +41,22 @@
 
         header {
             padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h2 {
             font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
+        /* HERO */
         .hero h1 {
             font-size: 60px;
             line-height: 1.1;
+            font-weight: 600;
+            letter-spacing: -1px;
         }
 
         .hero span {
@@ -92,71 +69,74 @@
             margin-top: 20px;
             font-size: 18px;
             color: #cbd5f5;
+            font-weight: 300;
         }
 
+        /* BADGE */
         .badge {
             display: inline-block;
             background: rgba(255,255,255,0.08);
             padding: 6px 14px;
             border-radius: 20px;
+            font-size: 14px;
             margin-bottom: 20px;
+            font-weight: 400;
         }
 
         .section-title {
             font-size: 22px;
             margin-bottom: 15px;
+            color: #e2e8f0;
+            font-weight: 500;
         }
 
         p {
             color: #94a3b8;
-            transition: 0.3s;
+            line-height: 1.7;
+            font-weight: 300;
+            transition: 0.3s ease;
         }
 
-        /* 🔥 Hover glow */
+        /* 🔥 Hover glow effect */
         section:hover p {
             color: #e2e8f0;
-            text-shadow: 0 0 10px rgba(99,102,241,0.4);
+            text-shadow: 0 0 8px rgba(99,102,241,0.3);
         }
 
+        /* PRODUCTS */
         .products {
             display: flex;
             justify-content: center;
             gap: 60px;
             flex-wrap: wrap;
+            margin-top: 30px;
         }
 
         .product {
             max-width: 280px;
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
 
+        .product h3 {
+            font-weight: 500;
+        }
+
+        /* 🚀 Product hover effect */
         .product:hover {
             transform: translateY(-6px);
             text-shadow: 0 0 12px rgba(168,85,247,0.6);
         }
 
-        /* 🧠 AI INTERACTIVE DOT */
-        .ai-dot {
-            width: 12px;
-            height: 12px;
-            background: #8b5cf6;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 15px #8b5cf6;
-        }
-
         footer {
+            text-align: center;
             padding: 40px;
             color: #64748b;
+            font-weight: 300;
         }
     </style>
 </head>
 
 <body>
-
-<div class="ai-dot" id="dot"></div>
 
 <header class="container">
     <h2>✦ StarkXLab</h2>
@@ -164,7 +144,8 @@
 
 <section class="hero">
     <div class="container">
-        <div class="badge">AI Startup • StarkXLab</div>
+
+        <div class="badge">StarkXLab</div>
 
         <h1>
             Unlock Your <span>AI Potential</span><br>
@@ -175,27 +156,39 @@
             StarkXLab focuses on building intelligent digital systems that simplify complexity 
             and enhance productivity using modern AI-driven approaches.
         </p>
+
     </div>
 </section>
 
 <section>
     <div class="container">
         <div class="section-title">About</div>
-        <p>I'm Subhash, a backend developer passionate about AI systems.</p>
+        <p>
+            I'm Subhash, a backend developer passionate about building scalable systems and exploring 
+            artificial intelligence. StarkXLab represents my long-term vision to create impactful AI-driven 
+            products that solve real-world problems.
+        </p>
     </div>
 </section>
 
 <section>
     <div class="container">
         <div class="section-title">Core Capability</div>
-        <p>Designing intelligent systems using AI.</p>
+        <p>
+            Designing intelligent systems that can understand, adapt, and assist users using AI to 
+            automate workflows and enhance decision-making.
+        </p>
     </div>
 </section>
 
 <section>
     <div class="container">
         <div class="section-title">Vision</div>
-        <p>Building a powerful AI ecosystem and intelligent operating layer.</p>
+        <p>
+            StarkXLab aims to build a powerful AI ecosystem that integrates into daily life, automates 
+            complex tasks, and evolves into an intelligent operating layer that understands user behavior 
+            and enhances productivity at scale.
+        </p>
     </div>
 </section>
 
@@ -206,14 +199,15 @@
         <div class="products">
             <div class="product">
                 <h3>AI Operating Layer</h3>
-                <p>Smart system across apps.</p>
+                <p>A system that understands users and works across applications.</p>
             </div>
 
             <div class="product">
                 <h3>Web Intelligence Engine</h3>
-                <p>AI understanding web content.</p>
+                <p>AI that understands and summarizes web content in real-time.</p>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -225,30 +219,8 @@
 </section>
 
 <footer>
-    © 2026 StarkXLab
+    © 2026 StarkXLab. All rights reserved.
 </footer>
-
-<script>
-    // ⚡ Scroll reveal
-    const sections = document.querySelectorAll("section");
-
-    window.addEventListener("scroll", () => {
-        sections.forEach(sec => {
-            const top = sec.getBoundingClientRect().top;
-            if (top < window.innerHeight - 100) {
-                sec.classList.add("show");
-            }
-        });
-    });
-
-    // 🧠 AI cursor dot
-    const dot = document.getElementById("dot");
-
-    document.addEventListener("mousemove", (e) => {
-        dot.style.left = e.clientX + "px";
-        dot.style.top = e.clientY + "px";
-    });
-</script>
 
 </body>
 </html>
